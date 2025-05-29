@@ -1,10 +1,10 @@
-# TicketApp - Sistema de Gestión de Tickets
+||||||# TicketApp - Sistema de Gestión de Tickets
 
 Este proyecto es una aplicación desarrollada en Java utilizando el enfoque de arquitectura por capas. Implementa acceso a datos mediante el patrón DAO (Data Access Object) y maneja entidades representativas del modelo de base de datos. Está desarrollado con NetBeans.
 
 ---
 
-## Estructura del Proyecto
+Estructura del Proyecto
 
 ```
 TicketApp/
@@ -20,7 +20,7 @@ TicketApp/
 
 ---
 
-## Indicaciones cumplidas
+Indicaciones cumplidas
 
 **DAO y Clases:** Se implementó un paquete `dao` con clases DAO individuales por tabla.  
 **Entidades:** Se creó una clase entidad por cada tabla en el paquete `businessentity`.  
@@ -31,3 +31,25 @@ TicketApp/
 **Repositorio GIT:** Asegúrate de compartir el enlace privado de tu repositorio GIT.
 
 ---
+Entregables
+
+**Repositorio GIT**: Proporcione un enlace privado con permisos restringidos para el equipo.
+**Proyecto NetBeans**: Estructurado como se describe.
+**Script SQL**: Archivo script.sql incluido en database/.
+
+---
+
+Ejecución
+
+1. Clona el repositorio.
+2. Abre el proyecto en NetBeans.
+3. Asegúrate de tener una base de datos MySQL/MariaDB configurada.
+4. Ejecuta el script SQL (database/script.sql) para crear las tablas.
+5. Ejecuta TicketApp.java desde src/main.
+
+---
+
+Autores
+
+- Luis Alexander Castro Cancino
+- Josef Richard Cotera Marcilla
