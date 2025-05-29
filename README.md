@@ -1,4 +1,4 @@
-||||||# TicketApp - Sistema de Gestión de Tickets
+TicketAPp - Sistema de Gestión de Tickets
 
 Este proyecto es una aplicación desarrollada en Java utilizando el enfoque de arquitectura por capas. Implementa acceso a datos mediante el patrón DAO (Data Access Object) y maneja entidades representativas del modelo de base de datos. Está desarrollado con NetBeans.
 
