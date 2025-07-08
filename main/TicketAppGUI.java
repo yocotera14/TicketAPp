@@ -17,13 +17,13 @@ public class TicketAppGUI {
         DBConnection.initDatabase();
         ClienteDAO clienteDAO = new ClienteDAO();
 
-        // Crear ventana principal
+        // crea una ventana principal
         JFrame frame = new JFrame("Gestión de Clientes");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(450, 400);
         frame.setLayout(new BorderLayout());
 
-        // Panel superior: entrada y botones
+        // entrada y botones
         JPanel topPanel = new JPanel(new GridLayout(3, 1, 5, 5));
         topPanel.setBackground(new Color(220, 240, 255)); 
         // Subpanel de entrada
@@ -33,7 +33,7 @@ public class TicketAppGUI {
         inputPanel.add(label);
         inputPanel.add(nombreField);
 
-        // Subpanel de botones
+        // subpanel de botones
         JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
         JButton btnRegistrar = new JButton("Registrar");
         JButton btnListar = new JButton("Listar");
@@ -48,14 +48,14 @@ public class TicketAppGUI {
         buttonPanel.add(btnListar);
         buttonPanel.add(btnEliminar);
 
-        // Subpanel vacío para espacio 
+        // subpanel vacio para espacio 
         JPanel spacer = new JPanel();
 
         topPanel.add(inputPanel);
         topPanel.add(buttonPanel);
         topPanel.add(spacer);
 
-        // Panel central: resultados
+        // resultados
         JTextArea output = new JTextArea();
         output.setEditable(false);
         JScrollPane scrollPane = new JScrollPane(output);
@@ -63,13 +63,13 @@ public class TicketAppGUI {
         output.setForeground(Color.GREEN);
         output.setFont(new Font("Monospaced", Font.PLAIN, 13));
 
-        // Añadir paneles a la ventana
+        // paneles a la ventana
         frame.add(topPanel, BorderLayout.NORTH);
         frame.add(scrollPane, BorderLayout.CENTER);
         
         
 
-        // Acción: Registrar cliente
+        // registra al cliente
         btnRegistrar.addActionListener(e -> {
             String nombre = nombreField.getText().trim();
             if (nombre.isEmpty()) {
@@ -88,7 +88,7 @@ public class TicketAppGUI {
             }
         });
 
-        // Acción: Listar clientes
+        // lista de clientes
         btnListar.addActionListener(e -> {
             List<Cliente> clientes = clienteDAO.findAll();
             if (clientes.isEmpty()) {
@@ -103,7 +103,7 @@ public class TicketAppGUI {
             output.setText(sb.toString());
         });
 
-        // Acción: Eliminar cliente
+        // elimina al cliente
         btnEliminar.addActionListener(e -> {
             String nombre = nombreField.getText().trim();
             if (nombre.isEmpty()) {
@@ -120,7 +120,7 @@ public class TicketAppGUI {
             }
         });
 
-        // Mostrar ventana
+        // se muestra la ventana
         frame.setLocationRelativeTo(null); 
         frame.setVisible(true);
     }
